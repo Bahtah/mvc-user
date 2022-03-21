@@ -1,5 +1,6 @@
 package com.config;
 
+import com.entity.Car;
 import com.entity.User;
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 import org.springframework.context.annotation.Bean;
@@ -46,7 +47,7 @@ public class MyHibernateConfig {
         hibernateProperties.setProperty("hibernate.show_sql", "true");
         sessionFactory.setHibernateProperties(hibernateProperties);
 
-        sessionFactory.setAnnotatedClasses(User.class);
+        sessionFactory.setAnnotatedClasses(User.class, Car.class);
 
         return sessionFactory;
     }

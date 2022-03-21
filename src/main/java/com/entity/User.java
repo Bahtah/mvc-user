@@ -16,10 +16,15 @@ public class User {
     @Column(name = "userAge")
     private int age;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "car_id")
+    private Car car;
+
     public User() {
     }
 
-    public User(String name, int age) {
+    public User(Long id, String name, int age) {
+        this.id = id;
         this.name = name;
         this.age = age;
     }
@@ -46,5 +51,13 @@ public class User {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public Car getCar() {
+        return car;
+    }
+
+    public void setCar(Car car) {
+        this.car = car;
     }
 }

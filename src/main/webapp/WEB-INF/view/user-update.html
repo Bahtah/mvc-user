@@ -29,22 +29,16 @@
             <label for="age" class="form-label">AGE</label>
             <input type="number" th:field="*{age}" id="age" class="form-control">
         </div>
+        <div class="mb-3">
+            <label for="carModel" class="form-label">Model</label>
+            <input type="text" th:field="*{car.model}" id="carModel" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="carColor" class="form-label">Color</label>
+            <input type="text" th:field="*{car.color}" id="carColor" class="form-control">
+        </div>
         <button type="submit" class="btn btn-primary">UPDATE USER</button>
     </form>
-
-
-    <!--<form action="#" th:action="@{/user-update}" th:object="${user}" method="post">
-        <label for="id">ID</label>
-        <input readonly type="number" th:field="*{id}" id="id" placeholder="ID">
-        <br/>
-        <label for="name">Name</label>
-        <input type="text" th:field="*{name}" id="name" placeholder="Name">
-        <br/>
-        <label for="age">Age</label>
-        <input type="number" th:field="*{age}" id="age" placeholder="Age">
-        <br/>
-        <input type="submit" value="Update User">
-    </form>-->
 
 </div>
 

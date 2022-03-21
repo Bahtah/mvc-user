@@ -22,20 +22,16 @@
             <label for="age" class="form-label">AGE</label>
             <input type="number" th:field="*{age}" id="age" class="form-control">
         </div>
+        <div class="mb-3">
+            <label for="carModel" class="form-label">Model</label>
+            <input type="text" th:field="*{car.model}" id="carModel" class="form-control">
+        </div>
+        <div class="mb-3">
+            <label for="carColor" class="form-label">Color</label>
+            <input type="text" th:field="*{car.color}" id="carColor" class="form-control">
+        </div>
         <button type="submit" class="btn btn-primary">CREATE USER</button>
     </form>
-
-    <!--<div class="form_block text-center">
-        <form action="#" th:action="@{/user-create}" th:object="${user}" method="post">
-            <label for="name">NAME</label>
-            <input type="text" th:field="*{name}" id="name" placeholder="Name">
-            <br>
-            <label for="age">AGE</label>
-            <input type="number" th:field="*{age}" id="age" placeholder="Age">
-            <br>
-            <input type="submit" value="Create User">
-        </form>
-    </div>-->
 
 </div>
 

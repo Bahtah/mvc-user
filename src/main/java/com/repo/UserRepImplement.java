@@ -39,6 +39,7 @@ public class UserRepImplement implements UserRepository {
         Session session = sessionFactory.getCurrentSession();
         User user1 = session.get(User.class, id);
         user1.setName(user.getName());
+        user1.setCar(user.getCar());
     }
 
     @Override

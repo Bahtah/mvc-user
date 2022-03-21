@@ -17,22 +17,26 @@
 
     <table class="table bg-dark text-white">
         <tr>
-            <th> User Id</th>
             <th> User Age</th>
             <th> User Name</th>
+            <th> car Model</th>
+            <th> car Color</th>
         </tr>
 
         <div th:each="user : ${users}" >
 
             <tr>
                 <td>
-                    <p th:text="${user.id}"></p>
-                </td>
-                <td>
                     <p th:text="${user.age}"></p>
                 </td>
                 <td>
                     <p th:text="${user.name}"></p>
+                </td>
+                <td>
+                    <p th:text="${user.car.model}"></p>
+                </td>
+                <td>
+                    <p th:text="${user.car.color}"></p>
                 </td>
 
                 <td>
